@@ -1,0 +1,12 @@
+.displayIncomes, .displayExpense {
+    max-height: 400px; /* Set your max height */
+    overflow-y: scroll; /* Enable scrolling */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.displayIncomes::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
+.displayExpense::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in WebKit browsers */
+}
