@@ -1,22 +1,8 @@
-import { useEffect, useState } from 'react';
+
 import { menuItems } from '../Utils/Menu';
-import { bars, signout } from '../Utils/Icons';
-import { useNavigate } from 'react-router-dom';
+import { bars } from '../Utils/Icons';
 
 const NavBar = ({ active, setActive, toggle, setToggle }) => {
-
-    const [loggedUser, setLoggedUser] = useState('');
-    const navigate = useNavigate();
-    useEffect(()=>{
-        setLoggedUser(localStorage.getItem('loggedInUser'));
-    }, []);
-
-    const handleLogout = () =>{
-        localStorage.removeItem('token');
-        localStorage.removeItem('loggedInUser');
-        alert('User Logout');
-        navigate('/test/login')
-    }
 
     return (
         <div className={`${setToggle? 'block':'hidden'}  border-2 border-sky-50 border-solid bg-sky-50 rounded-3xl sm:flex flex-col justify-between  
@@ -50,9 +36,7 @@ const NavBar = ({ active, setActive, toggle, setToggle }) => {
                 ))}
             </ul>
             <div className="bottom cursor-pointer pl-4 pb-3 hover:text-blue-200 text-[20px]">
-                <span onClick={handleLogout}>
-                    {signout} Sign out
-                </span>
+                
             </div>
         </div>
     );

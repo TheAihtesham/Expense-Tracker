@@ -1,10 +1,12 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-export default function LandingPage({ setIsLandingPage }) {
+
+export default function LandingPage() {
+  
   const navigate = useNavigate();
-
+  
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: (i = 1) => ({
@@ -42,12 +44,12 @@ export default function LandingPage({ setIsLandingPage }) {
         >
           <a href="#features" className="hover:underline">Features</a>
           <a href="#about" className="hover:underline">About</a>
-          <Link
-            to="/test/login"
+          <span
+            
             className="bg-blue-600 text-white px-4 py-2 rounded-full shadow hover:bg-blue-700 transition"
           >
             Sign In
-          </Link>
+          </span>
         </motion.nav>
       </header>
 
@@ -85,7 +87,7 @@ export default function LandingPage({ setIsLandingPage }) {
         </motion.div>
       </main>
 
-      {/* Features Section */}
+ 
       <section
         id="features"
         className="py-20 px-6 md:px-20 bg-white text-gray-900 rounded-t-3xl mt-16"
@@ -134,7 +136,6 @@ export default function LandingPage({ setIsLandingPage }) {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="bg-blue-700 text-white text-center text-sm py-6 mt-10 rounded-t-2xl">
         © {new Date().getFullYear()} Trackify — Built to Simplify Your Finances
       </footer>

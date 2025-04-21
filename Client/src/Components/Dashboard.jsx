@@ -15,12 +15,12 @@ const Dashboard = ({ toggle, setToggle }) => {
 
   return (
     <div className="dashboard-container pb-[14px] sm:p-4 space-y-6">
-      {/* Header */}
+     
       <div className="flex items-center justify-between">
         <h1 className="text-4xl font-bold text-sky-600 font-BonaNova">Dashboard</h1>
       </div>
 
-      {/* Stats Summary */}
+      
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         <div className="rounded-2xl p-6 bg-gradient-to-br from-green-100 to-green-50 shadow-md border">
           <h2 className="text-lg font-semibold text-green-900">Total Income</h2>
@@ -36,7 +36,6 @@ const Dashboard = ({ toggle, setToggle }) => {
         </div>
       </div>
 
-      {/* Chart and History Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <div className="bg-white rounded-2xl shadow-md p-4">
           <h3 className="text-xl font-semibold text-gray-700 ">Overview Chart</h3>
